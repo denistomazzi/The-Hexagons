@@ -1,0 +1,197 @@
+body {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Roboto";
+  color: #000;
+}
+body h1,h2,h3 {
+  font-size: 40px;
+  font-family: "Open Sans";
+  line-height: 1.375;
+}
+
+header {
+  background-image: url("hero.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ padding: 25px;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+}
+
+header img {
+  max-width: 300px;
+}
+
+section.about {
+  display: flex;
+}
+
+.guitar {
+  background-color: #2C9BFF;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+div.guitar img {
+  padding: 65px;
+}
+
+.introduction {
+  background-color: #F9DBD7;
+  color: #2C9BFF;
+  width: 50%;
+  padding: 65px;
+}
+
+.introduction h2 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.37;
+  margin-bottom: 20px;
+}
+
+section.store {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 200px;
+}
+
+div.store-heading h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+div.store-heading nav {
+ padding: 40px 0 40px 0;
+}
+div.store-heading nav a  {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+  margin-right: 20px;
+}
+
+div.store {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  max-width: 900px;
+}
+div.store img {
+  max-width: 300px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #2C9BFF;
+}
+
+footer img {
+  padding: 15px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.item {
+  position: relative;
+}
+.overlay {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(44, 155, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+.overlay h4, .overlay p {
+    color: white;
+    left: 15px;
+    position: absolute;
+    font-weight: 700;
+}
+.overlay h4 {
+  top: 15px;
+  font-family: "Open Sans";
+}
+
+.overlay p {
+  bottom: 15px;
+  font-size: 36px;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.selected {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2C9BFF;
+}
+
+p.show-filters {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header {
+    height: 500px;
+  }
+  
+  div.guitar img {
+    padding: 30px;
+  }
+  
+ .about div.introduction {
+    padding: 30px 30px 50px;
+  }
+ 
+}
+
+@media (max-width:640px) {
+  
+  section.store {
+    padding: 30px;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  div.guitar, div.introduction {
+    width: 100%;
+  }
+  
+  nav.filters-list {
+    display: none;
+  }
+  nav.filters-list a {
+    display: block;
+  }
+  
+  p.show-filters {
+    display: block;
+    cursor: pointer;
+  }
+}
